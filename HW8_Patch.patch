@@ -1,0 +1,20 @@
+# HG changeset patch
+# User Brian Manion <bmanion@uw.edu>
+# Date 1369524506 14400
+# Node ID 64a60937afafdf0e93dbd8424e4a2733cc761aef
+# Parent  1077314f416653b28e199c382667a1f11e444bdd
+Added a much needed "Hello" message to gcd.
+
+diff --git a/sage/rings/integer.pyx b/sage/rings/integer.pyx
+old mode 100644
+new mode 100755
+--- a/sage/rings/integer.pyx
++++ b/sage/rings/integer.pyx
+@@ -5633,6 +5633,7 @@
+             sage: gcd(21,2^6)
+             1
+         """
++        print "Hello"
+         if not isinstance(n, Integer) and not isinstance(n, int):
+             left, right = canonical_coercion(self, n)
+             return left.gcd(right)
